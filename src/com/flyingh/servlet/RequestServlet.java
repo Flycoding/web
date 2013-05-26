@@ -23,8 +23,44 @@ import com.flyingh.vo.User;
 public class RequestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		String username = request.getParameter("username");
+		response.setCharacterEncoding("gbk");
+		response.setContentType("text/html;charset=gbk");
+		response.getWriter().write(username);
+	}
+
+	@SuppressWarnings("unused")
+	private void test9(HttpServletRequest request) throws UnsupportedEncodingException {
+		// request.setCharacterEncoding("utf-8");
+		// System.out.println(request.getParameter("username"));
+		System.out.println(new String(request.getParameter("username").getBytes("iso-8859-1"), "utf-8"));
+	}
+
+	@SuppressWarnings("unused")
+	private void testPost(HttpServletRequest request) throws UnsupportedEncodingException {
+		request.setCharacterEncoding("utf-8");
+		System.out.println(request.getParameter("username"));
+	}
+
+	@SuppressWarnings("unused")
+	private void testGet(HttpServletRequest request) throws UnsupportedEncodingException {
+		String username = request.getParameter("username");
+		System.out.println(new String(username.getBytes("iso-8859-1"), "utf-8"));
+	}
+
+	@SuppressWarnings("unused")
+	private void test8(HttpServletRequest request) {
+		String[] parameterValues = request.getParameterValues("username");
+		System.out.println("username:");
+		for (String parameterValue : parameterValues) {
+			System.out.println("\t" + parameterValue);
+		}
+	}
+
+	@SuppressWarnings("unused")
+	private void test7(HttpServletRequest request) throws IOException {
 		ServletInputStream is = request.getInputStream();
 		int len = 0;
 		byte[] buf = new byte[1024];
@@ -57,8 +93,7 @@ public class RequestServlet extends HttpServlet {
 		while (parameterNames.hasMoreElements()) {
 			String parameterName = parameterNames.nextElement();
 			System.out.println(parameterName + ":");
-			String[] parameterValues = request
-					.getParameterValues(parameterName);
+			String[] parameterValues = request.getParameterValues(parameterName);
 			for (String parameterValue : parameterValues) {
 				System.out.println(parameterValue);
 			}
@@ -70,21 +105,19 @@ public class RequestServlet extends HttpServlet {
 		Enumeration<String> headerNames = request.getHeaderNames();
 		while (headerNames.hasMoreElements()) {
 			String headerName = headerNames.nextElement();
-			System.out.println(headerName + "--->"
-					+ request.getHeader(headerName));
+			System.out.println(headerName + "--->" + request.getHeader(headerName));
 		}
 	}
 
 	@SuppressWarnings("unused")
-	private void test3(HttpServletRequest request, HttpServletResponse response)
-			throws UnsupportedEncodingException, ServletException, IOException {
+	private void test3(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException,
+			ServletException, IOException {
 		System.out.println(request.getHeader("Accept-Encoding"));
 		System.out.println(request.getDateHeader("Expires"));
 		System.out.println(request.getAuthType());// null
 		System.out.println(request.getCharacterEncoding());// null
 		request.setCharacterEncoding("utf-8");
-		request.getRequestDispatcher("/RequestServlet2").forward(request,
-				response);
+		request.getRequestDispatcher("/RequestServlet2").forward(request, response);
 	}
 
 	@SuppressWarnings("unused")
@@ -102,17 +135,15 @@ public class RequestServlet extends HttpServlet {
 	}
 
 	@SuppressWarnings("unused")
-	private void test(HttpServletRequest request, HttpServletResponse response)
-			throws IOException {
+	private void test(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		PrintWriter writer = response.getWriter();
 		System.out.println(request.getContextPath());
-		writer.write(request.getMethod() + "<br/>" + request.getRemoteUser()
-				+ "<br/>" + request.getRequestURI() + "<br/>"
-				+ request.getRequestURL().toString());
+		writer.write(request.getMethod() + "<br/>" + request.getRemoteUser() + "<br/>" + request.getRequestURI()
+				+ "<br/>" + request.getRequestURL().toString());
 	}
 
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+			IOException {
 		doGet(request, response);
 	}
 
