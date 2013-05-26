@@ -9,5 +9,6 @@
 <body>
 	<h1>Hello world!!!</h1>
 	<h1>${hello }</h1>
+	<a href="/web/RefererServlet">see yf</a>
 </body>
 </html>
