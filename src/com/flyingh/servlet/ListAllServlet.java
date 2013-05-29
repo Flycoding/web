@@ -17,7 +17,7 @@ import com.flyingh.vo.Book;
 @WebServlet("/ListAllServlet")
 public class ListAllServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final int MAX_HISTORY_NUMBER = 3;
+	public static final int MAX_HISTORY_NUMBER = 3;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("books", DB.getAll());

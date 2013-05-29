@@ -67,6 +67,12 @@ public class DetailServlet extends HttpServlet {
 	}
 
 	private void addCookie(HttpServletRequest request, HttpServletResponse response, Cookie cookie, String value) {
+		if (value.contains("-")) {
+			String[] strs = value.split("-");
+			if (strs.length > ListAllServlet.MAX_HISTORY_NUMBER) {
+				value = value.substring(0, value.lastIndexOf("-"));
+			}
+		}
 		cookie.setValue(value);
 		cookie.setMaxAge(24 * 3600);
 		cookie.setPath(request.getContextPath());
