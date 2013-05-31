@@ -43,7 +43,11 @@ public class DetailServlet extends HttpServlet {
 						strsList.addFirst(id);
 						addCookie(request, response, cookie, join(strsList, "-"));
 					} else {
-						addCookie(request, response, cookie, id);
+						if (value.equals(id)) {
+							addCookie(request, response, cookie, id);
+						} else {
+							addCookie(request, response, cookie, id + "-" + value);
+						}
 					}
 				}
 				return;
