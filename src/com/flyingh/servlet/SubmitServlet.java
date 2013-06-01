@@ -18,7 +18,7 @@ public class SubmitServlet extends HttpServlet {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		if (tokenValid(request)) {
+		if (isTokenValid(request)) {
 			request.getSession().removeAttribute("token");
 			request.setAttribute("info", request.getParameter("info"));
 			System.out.println("success!");
@@ -27,10 +27,11 @@ public class SubmitServlet extends HttpServlet {
 		System.out.println("don't submit repeatedly");
 	}
 
-	private boolean tokenValid(HttpServletRequest request) {
+	private boolean isTokenValid(HttpServletRequest request) {
 		Object token = request.getSession().getAttribute("token");
-		return request.getParameter("token") != null && token != null
-				&& request.getParameter("token").equals(token.toString());
+		String tokenParameter = request.getParameter("token");
+		return token != null && tokenParameter != null
+				&& tokenParameter.equals(token.toString());
 	}
 
 	protected void doPost(HttpServletRequest request,
