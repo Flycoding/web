@@ -7,12 +7,15 @@
 <title>reg</title>
 </head>
 <body>
-	<form action="">
+	<h1>${error }</h1>
+	<form action="/web/RegServlet" method="post">
 		username:<input type="text" name="username" /><br /> password:<input
 			type="password" name="password" /><br /> code:<input type="text"
 			name="code" /><br /> <img alt="change validation code"
 			src="/web/ValidateCodeServlet"
-			onclick="this.src=this.src+'?'+new Date()" style="cursor: pointer; cursor: hand;" />
+			onclick="this.src=this.src+'?'+new Date()"
+			style="cursor: pointer; cursor: hand;" /><br /> <input
+			type="submit" value="submit">
 	</form>
 </body>
 </html>
