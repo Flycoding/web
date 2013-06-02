@@ -12,7 +12,6 @@
 		<error-code>404</error-code>
 		<location>/error.jsp</location>
 	</error-page>
-
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
@@ -21,6 +20,15 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<servlet>
+		<servlet-name>yf</servlet-name>
+		<jsp-file>/1.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>yf</servlet-name>
+		<url-pattern>/yf</url-pattern>
+	</servlet-mapping>
+
 	<servlet>
 		<servlet-name>demo6</servlet-name>
 		<servlet-class>com.flyingh.servlet.DemoServlet6</servlet-class>
