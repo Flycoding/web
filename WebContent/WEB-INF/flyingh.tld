@@ -7,6 +7,38 @@
 	<tlib-version>1.0</tlib-version>
 	<short-name>flyingh</short-name>
 	<uri>http://www.flyingh.com</uri>
+
+	<tag>
+		<description>view content</description>
+		<name>view</name>
+		<tag-class>com.flyingh.simple.tag.SimpleTagDemo</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<description>upper case content</description>
+		<name>upperCase</name>
+		<tag-class>com.flyingh.simple.tag.UpperCaseTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- -->
 	<tag>
 		<description>Outputs IP</description>
 		<name>viewIP</name>
