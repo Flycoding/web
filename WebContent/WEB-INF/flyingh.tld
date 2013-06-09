@@ -25,5 +25,11 @@
 		<tag-class>com.flyingh.tag.DemoTag</tag-class>
 		<body-content>JSP</body-content>
 	</tag>
+	<tag>
+		<description>Outputs upper case</description>
+		<name>upper</name>
+		<tag-class>com.flyingh.tag.UpperTag</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
 </taglib>
 
