@@ -20,6 +20,12 @@
 		<tag-class>com.flyingh.simple.tag.UpperCaseTag</tag-class>
 		<body-content>scriptless</body-content>
 	</tag>
+	<tag>
+		<description>skip page</description>
+		<name>skipPage</name>
+		<tag-class>com.flyingh.simple.tag.SkipPageTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
 
 
 
