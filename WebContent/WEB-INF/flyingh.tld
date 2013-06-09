@@ -19,5 +19,11 @@
 		<tag-class>com.flyingh.tag.ViewDateTimeTag</tag-class>
 		<body-content>empty</body-content>
 	</tag>
+	<tag>
+		<description>Outputs 5 times</description>
+		<name>view5</name>
+		<tag-class>com.flyingh.tag.DemoTag</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
 </taglib>
 
