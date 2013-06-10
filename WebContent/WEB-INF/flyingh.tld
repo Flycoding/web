@@ -43,6 +43,17 @@
 		<tag-class>com.flyingh.simple.tag.RefererTag</tag-class>
 		<body-content>empty</body-content>
 	</tag>
+	<tag>
+		<description>if</description>
+		<name>if</name>
+		<tag-class>com.flyingh.simple.tag.IfTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>test</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 
 
 
