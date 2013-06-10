@@ -26,6 +26,17 @@
 		<tag-class>com.flyingh.simple.tag.SkipPageTag</tag-class>
 		<body-content>empty</body-content>
 	</tag>
+	<tag>
+		<description>loop</description>
+		<name>loop</name>
+		<tag-class>com.flyingh.simple.tag.LoopTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>count</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 
 
 
