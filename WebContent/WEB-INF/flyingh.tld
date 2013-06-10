@@ -54,6 +54,23 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
+	<tag>
+		<description>if2</description>
+		<name>if2</name>
+		<tag-class>com.flyingh.simple.tag.IfTag2</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>test</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>else</description>
+		<name>else</name>
+		<tag-class>com.flyingh.simple.tag.ElseTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
 
 
 
