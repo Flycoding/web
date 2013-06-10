@@ -71,6 +71,29 @@
 		<tag-class>com.flyingh.simple.tag.ElseTag</tag-class>
 		<body-content>scriptless</body-content>
 	</tag>
+	<tag>
+		<description>choose</description>
+		<name>choose</name>
+		<tag-class>com.flyingh.simple.tag.ChooseTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
+	<tag>
+		<description>when</description>
+		<name>when</name>
+		<tag-class>com.flyingh.simple.tag.WhenTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>test</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>otherwise</description>
+		<name>otherwise</name>
+		<tag-class>com.flyingh.simple.tag.OtherwiseTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
 
 
 
