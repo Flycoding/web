@@ -37,6 +37,12 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
+	<tag>
+		<description>referer</description>
+		<name>referer</name>
+		<tag-class>com.flyingh.simple.tag.RefererTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
 
 
 
