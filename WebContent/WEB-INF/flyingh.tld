@@ -94,6 +94,21 @@
 		<tag-class>com.flyingh.simple.tag.OtherwiseTag</tag-class>
 		<body-content>scriptless</body-content>
 	</tag>
+	<tag>
+		<description>forEach</description>
+		<name>forEach</name>
+		<tag-class>com.flyingh.simple.tag.ForEachTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>items</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 
 
 
