@@ -109,6 +109,12 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 	</tag>
+	<tag>
+		<description>htmlFilter</description>
+		<name>htmlFilter</name>
+		<tag-class>com.flyingh.simple.tag.HtmlFilterTag</tag-class>
+		<body-content>scriptless</body-content>
+	</tag>
 
 
 
