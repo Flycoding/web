@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.util.*"%>
+	pageEncoding="UTF-8" import="java.util.*,com.flyingh.vo.*"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="flyingh" uri="http://www.flyingh.com"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,8 +10,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		pageContext.setAttribute("person", new Person());
+	%>
+	<h1>${empty person?"":flyingh:add("Welcome,",person.name) }</h1>
+	${flyingh:add("hello",",world") }
+	<h1>${not empty person?"haha":person.name }</h1>
 	<h1>${fn:escapeXml("<a href='http://www.google.com/ncr'>Google</a>") }</h1>
-	<h1><c:out value="<a href=''>click me</a>"></c:out> </h1>
+	<h1>
+		<c:out value="<a href=''>click me</a>"></c:out>
+	</h1>
 	<h1>${fn:substring("hello world!!!",7,9) }</h1>
 	<h1>${fn:substring("hello world!!!",7,-3) }</h1>
 	<h1>${fn:toUpperCase("hello world!!!") }</h1>
