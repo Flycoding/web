@@ -115,6 +115,22 @@
 		<tag-class>com.flyingh.simple.tag.HtmlFilterTag</tag-class>
 		<body-content>scriptless</body-content>
 	</tag>
+	<tag>
+		<description>language</description>
+		<name>lang</name>
+		<tag-class>com.flyingh.simple.tag.LangTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>key</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>baseName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
 
 
 
@@ -162,7 +178,8 @@
 	<function>
 		<name>add</name>
 		<function-class>com.flyingh.util.StringUtils</function-class>
-		<function-signature>java.lang.String add(java.lang.String, java.lang.String)</function-signature>
+		<function-signature>java.lang.String add(java.lang.String,
+			java.lang.String)</function-signature>
 	</function>
 </taglib>
 
