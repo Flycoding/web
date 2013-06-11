@@ -34,7 +34,7 @@
 	<input type="radio" name="sex" value="girl"
 		${sex eq "girl"?"checked":""}>Girl
 
-	<h1>${1>=0&&2>3?"hello world!!!":"hahaha" }</h1>
+	<%-- 	<h1>${1>=0&&2>3?"hello world!!!":"hahaha" }</h1> --%>
 	<%
 		pageContext.setAttribute("obj", null);
 		pageContext.setAttribute("list", new ArrayList<String>());
