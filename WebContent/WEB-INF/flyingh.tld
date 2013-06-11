@@ -123,16 +123,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 	<!-- -->
 	<tag>
 		<description>Outputs IP</description>
@@ -158,5 +148,16 @@
 		<tag-class>com.flyingh.tag.UpperTag</tag-class>
 		<body-content>JSP</body-content>
 	</tag>
+
+
+
+
+	<function>
+		<description>html filter</description>
+		<display-name>htmlFilter</display-name>
+		<name>filter</name>
+		<function-class>com.flyingh.util.HtmlFilter</function-class>
+		<function-signature>java.lang.String filter(java.lang.String)</function-signature>
+	</function>
 </taglib>
 

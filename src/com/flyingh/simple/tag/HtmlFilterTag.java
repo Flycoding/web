@@ -12,7 +12,7 @@ public class HtmlFilterTag extends SimpleTagSupport {
 		StringWriter out = new StringWriter();
 		getJspBody().invoke(out);
 		getJspContext().getOut().write(
-				out.toString().replaceAll("&", "$amp;").replaceAll("<", "&lt;")
+				out.toString().replaceAll("&", "&amp;").replaceAll("<", "&lt;")
 						.replaceAll(">", "&gt;").replaceAll("\"", "&quot;"));
 	}
 }
